@@ -4,12 +4,20 @@
 }
 
 div.fundo{
-    background-image: linear-gradient(45deg, black,red);
+    background-image: linear-gradient(45deg, black,rgb(0, 140, 255));
     height: 100vh;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 30px;
+}
+
+a{
+    color: rgb(255, 136, 0);
+}
+a:hover{
+    color: white;
+    background-color: blue;
 }
 
 div.calculadora{
@@ -24,8 +32,8 @@ div.calculadora{
 
 button.botao{
     background-color: gray;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     font-size: 25px;
     cursor: pointer;
     border: none;
@@ -38,8 +46,8 @@ button.botao:hover{
 }
 
 p#resultado{
-    width: 215px;
-    height: 30px;
+    width: 315px;
+    height: 40px;
     margin: 5px;
     background-color: white;
     font-size: 25px;

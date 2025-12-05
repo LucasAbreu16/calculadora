@@ -13,11 +13,20 @@ function apagar(){
 }
 
 function calcular(){
-    var resultado = document.getElementById('resultado').innerHTML;
+    let resultado = document.getElementById('resultado').innerHTML;
+
     if(resultado){
-        document.getElementById('resultado').innerHTML = eval(resultado);
+        try {
+            let expr = normalizarExpressao(resultado);
+            document.getElementById('resultado').innerHTML = eval(expr);
+        } catch {
+            alert("Expressão inválida!");
+        }
+    } else {
+        alert("Insira um valor para realizar um calculo");
     }
-    else{
-        alert('Insira um valor para realizar um calculo');
-    }
+}
+
+function normalizarExpressao(expr) {
+    return expr.replace(/\b0+(\d+)/g, "$1");
 }
